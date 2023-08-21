@@ -107,12 +107,12 @@ bcac;0;0;0.00756
 
 **input.txt**
 ```
-εba;1
-εaaaabbbbbaaaaa;1
+bba;1
+aaaabbbbbaaaaa;1
 ```
 
 **output.txt**
 ```
-εba;1;1;0.00042
-εaaaabbbbbaaaaa;1;1;0.00073
+bba;1;1;0.00042
+aaaabbbbbaaaaa;1;1;0.00073
 ```
