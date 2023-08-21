@@ -116,3 +116,5 @@ aaaabbbbbaaaaa;1
 bba;1;1;0.00042
 aaaabbbbbaaaaa;1;1;0.00073
 ```
+
+**Dupla: Sophia Ishii Dognani e José Pedro Belo**
