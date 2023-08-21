@@ -10,7 +10,7 @@
   O trabalho foi desenvolvido em python orientado a objeto. Primeiro ele lê o arquivo automato.json e depois recebe o arquivo input.txt para reconhecer as entradas. No final, ele gera um arquivo output.txt que informa a palavra de entrada, o resultado esperado, se as entradas foram aceitas ou rejeitadas e o tempo de processamento.
 
 ### Processamento: <h3>
-  O método **lerEntrada** lê as linhas do arquivo de entrada e o método **verificarCondicao** é usado para verificar cada entrada da lista. Ele verifica, para cada caractere, as transições do autômato para determinar o próximo estado e, se o caractere não conseguir ser lido por essas transições, o autômato entra em um estado de erro. Se o estado estiver na lista de estados finais, a entrada é considerada aceita e é registrada em um arquivo de saída com valor 1, mas caso contrário, seu valor será 0. O tempo de execução para processar cada entrada é medido usando a biblioteca **timeit** e é registrado no arquivo de saída.
+  O método **lerEntrada** lê as linhas do arquivo de entrada e o método **verificarCondicao** é usado para verificar cada entrada da lista. Ele verifica, para cada caractere, as transições do autômato para determinar o próximo estado e, se o caractere não conseguir ser lido por essas transições, o autômato entra em um estado de erro. Se o estado estiver na lista de estados finais, a entrada é considerada aceita e é registrada em um arquivo de saída com valor 1, mas caso contrário, será rejeitada e o seu valor será 0. O tempo de execução para processar cada entrada é medido usando a biblioteca **timeit** e é registrado no arquivo de saída.
 
 ### AFD <h3>
 **automato.json**
