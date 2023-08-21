@@ -109,13 +109,10 @@ bcac;0;0;0.00756
 ```
 εba;1
 εaaaabbbbbaaaaa;1
-abababab;0
-bbbbbbbb;0
-aaaaaaaaaaaa;0
-εaaaaabaaaaa;1
 ```
 
 **output.txt**
 ```
-
+εba;1;1;0.00042
+εaaaabbbbbaaaaa;1;1;0.00073
 ```
