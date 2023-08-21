@@ -34,7 +34,6 @@ if __name__ == "__main__":
     # output = open("det/output.txt", "w")
     # maquina = AF(data["inicial"], data["final"], data["transitions"], path)
     # maquina.verificarCondicao(output)
-<<<<<<< HEAD
 
     #path = "ndet/ex2_input.txt"
     #with open("ndet/automato.json", "r") as f:
@@ -51,21 +50,4 @@ if __name__ == "__main__":
     # output = open("mvazio/output.txt", "w")
     # maquina = AFE(data["inicial"], data["final"], data["transitions"], path)
     # maquina.verificarCondicao(output)
-=======
-    
-    path = "ndet/ex2_input.txt"
-    with open("ndet/automato.json", "r") as f:
-        data = json.load(f)
-    #Cria o arquivo output
-    output = open("ndet/output.txt", "w")
-    maquina = AFND(data["inicial"], data["final"], data["transitions"], path)
-    maquina.verificarCondicao(output)
 
-    # path = "mvazio/entrada.txt"
-    # with open("mvazio/automato.json", "r") as f:
-    #    data = json.load(f)
-    # cria o arquivo output
-    # output = open("mvazio/output.txt", "w")
-    # maquina = AFE(data["inicial"], data["final"], data["transitions"], path)
-    maquina.verificarCondicao(output)
->>>>>>> 31ffdfdaf3476023c57201991e58c0a956622aac
