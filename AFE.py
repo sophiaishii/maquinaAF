@@ -2,9 +2,9 @@ import time
 import timeit
 
 
-class AFND:
+class AFE:
     def __init__(self, inicial, final, transitions, path): #construtor eh o q instancia a classe e inicializa os atributos
-        print("AFND")
+        print("AFE")
         self.inicial = inicial #self eh o proprio objeto(atributo)
         self.final = final
         self.transitions = transitions
@@ -23,27 +23,31 @@ class AFND:
         #começo do tempo de execução
         tempo_inicial = timeit.default_timer()
         for linha in self.lista_input:
-            #inicializar o estado atual com o estado inicial
-            estado_atual = []
-            estado_atual.append(self.inicial)
-            #para cada caracter da linha
+            estado_atual = [self.inicial]
+            
             for caracter in linha:
                 if caracter == ";":
                     break
                 estado_atual_aux = []
                 for estado in estado_atual:
-                    for j in self.transitions:
-                        if j["from"] == estado:
-                            if j["read"] == caracter:
-                                if j["to"] not in estado_atual_aux:
-                                    estado_atual_aux.append(j["to"])
-                estado_atual = estado_atual_aux
-                if estado_atual == []:
-                    estado_atual = ["erro"]
-                    break
-                
-    
+                    for estado in estado_atual:
+                # adicionar estados alcançáveis por transições regulares
+                        for transicao in self.transitions:
+                            if transicao["from"] == estado and transicao["read"] == caracter:
+                                estado_atual_aux.extend(transicao["to"])
+                        
+                        # adicionar estados alcançáveis por ε-transições
+                        for transicao in self.transitions:
+                            if transicao["from"] == estado and transicao["read"] == "ε":
+                                estado_atual_aux.extend(transicao["to"])
                     
+                    estado_atual = estado_atual_aux
+                    
+                    if not estado_atual:
+                        estado_atual = ["erro"]
+                        break
+                      
+            print(estado_atual)
             for estado in estado_atual:
                 if estado in self.final:
                 #Tempo final de execução
@@ -62,5 +66,3 @@ class AFND:
                 if j["read"] == caracter:
                     return j["to"]
         return "erro"
-    
-        

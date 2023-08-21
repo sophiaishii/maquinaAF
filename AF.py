@@ -4,6 +4,7 @@ import timeit
 
 class AF:
     def __init__(self, inicial, final, transitions, path): #construtor eh o q instancia a classe e inicializa os atributos
+        print("AFD")
         self.inicial = inicial #self eh o proprio objeto(atributo)
         self.final = final
         self.transitions = transitions

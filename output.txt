@@ -1,0 +1,5 @@
+acab;1;1;1e-05
+bcab;1;1;3e-05
+ccab;1;1;4e-05
+abccab;1;1;5e-05
+bcacab;1;1;5e-05
